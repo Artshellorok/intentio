@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/projects', function(){
     return view('projects');
 });
+Route::get('/scientist_reg/1', function(){
+    return view('register_scientists_step1');
+});

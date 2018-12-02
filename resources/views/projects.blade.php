@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <h1 class="mt-4">Post Title</h1>
 
         <p class="lead">

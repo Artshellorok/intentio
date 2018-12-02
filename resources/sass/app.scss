@@ -16,4 +16,50 @@ body {
   body {
     padding-top: 56px;
   }
+  .wrapper-form{
+    padding-top: 35px !important; 
+  }
+}
+@media (max-width: 992px) {
+  .form-wrapper{
+    width: 100% !important;
+  }
+}
+.wrapper-form{
+  padding: 2rem;
+  padding-bottom: 250px;
+}
+.form-wrapper{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+  input{
+    font-size:24px!important;
+  }
+  input{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+  }
+  input::placeholder{
+    font-size:24px !important;
+  }
+}
+.btn-reg{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom :40px;
+  font-family: Helvetica;
+  text-transform:uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+.form-description{
+  font-size:14px;
+}
+.reg-title{
+  margin-top: 1vw;
+}
+.rem_pass{
+  font-size: 14px !important;
 }

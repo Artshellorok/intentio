@@ -65,7 +65,7 @@
             </div>
             <div class="col-lg-8 mx-auto find-btn">
               <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Найти исполнителя</a>
-              <a href ='#' class="mb-5 i-am-freelancer">Зарегистрироваться ученым</a>
+              <a href ='/scientist_reg/1' class="mb-5 i-am-freelancer">Зарегистрироваться ученым</a>
             </div>
           </div>
         </div>
