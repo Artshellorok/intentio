@@ -10,7 +10,8 @@
 
     <title>Blog Post - Start Bootstrap Template</title>
 
-    <link href="css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    
 
   </head>
 
@@ -19,12 +20,12 @@
     <div class="container">
       <div class="row">
         @yield('content')
-        @include('layouts.components.widget')
       </div>
 
     </div>
     @include('layouts.footer')
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
+    
   </body>
 
 </html>
