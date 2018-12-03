@@ -49,6 +49,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/login">Логин</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -64,8 +67,8 @@
               </h1>
             </div>
             <div class="col-lg-8 mx-auto find-btn">
-              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Найти исполнителя</a>
-              <a href ='/scientist_reg/1' class="mb-5 i-am-freelancer">Зарегистрироваться ученым</a>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="/business_reg">Найти исполнителя</a>
+              <a href ='/scientist_reg' class="mb-5 i-am-freelancer">Зарегистрироваться ученым</a>
             </div>
           </div>
         </div>

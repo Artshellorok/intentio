@@ -2,7 +2,7 @@
 @section('content')
     <div class='col-lg-12'>
             <div class='wrapper-form'>
-            <h1 class='text-center reg-title' style='margin-bottom: 35px;'>Эщкере тупо флексим lorem ipsum dolor sit amet</h1>
+            <h1 class='text-center reg-title' style='margin-bottom: 35px;'>Войти как исполнитель</h1>
                 <form>
                     <div class='form-wrapper'>
                         <div class="form-group">
@@ -18,7 +18,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" class='fleximtupa'>
                         <label class="form-check-label" for="exampleCheck1" >Запомнить пароль</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-reg">Зарегистрироваться</button>
+                        <button type="submit" class="btn btn-primary btn-reg">Войти</button>
                     </div>
                 </form>
             </div>
