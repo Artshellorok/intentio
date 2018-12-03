@@ -18,7 +18,7 @@ Route::get('/projects', function(){
     return view('projects');
 });
 
-Route::get('/loginbusiness', function(){
-    return view('loginbusiness');
+Route::get('/categories', function(){
+    return view('categories');
 });
 

@@ -18,203 +18,45 @@ body {
   }
 }
 
-
 // Categories
-.box1 {
-  margin-bottom: 20px;
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
 
+.div1 {
+  height:50px;
+  width: 1125px;
+  background:lightgray;
+  transition: 1s;
+  margin-bottom: 50px;
+  
+}
+
+.text1 {
+  opacity: 1;
+  font-size: 20px;
+  transition:3s;
   
 
 }
 
-//box1 image copies
-.box1img {
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-  transition: 0.5s;
-  opacity:1;
+.div1:hover{
+  background:#007bff;
 }
 
-.box2img {
-  background: url(https://media.fromthegrapevine.com/assets/images/2018/4/einstein-0417-social.jpg.480x0_q71_crop-scale.jpg);
-  background-size: 100% 100%;
-  transition: 0.5s;
-  opacity:1;
-}
-
-.box3img {
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-  transition: 0.5s;
-  opacity:1;
-}
-
-.box4img {
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-  transition: 0.5s;
-  opacity:1;
-}
-
-.box5img {
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-  transition: 0.5s;
-  opacity:1;
-}
-//end
-
-.text {
-  opacity: 0;
-  color: white;
-  
-}
-
-//inner div copies
-.innerdiv1 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-}
-
-.innerdiv1-1 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-}
-
-.innerdiv2 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(https://media.fromthegrapevine.com/assets/images/2018/4/einstein-0417-social.jpg.480x0_q71_crop-scale.jpg);
-  background-size: 100% 100%;
-}
-
-.innerdiv3 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-}
-
-.innerdiv4 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-}
-
-.innerdiv5 {
-  height: 150px;
-  width: 200px;
-  transition: 0.5s;
-  background: url(http://mospolytech.ru/storage/65b9eea6e1cc6bb9f0cd2a47751a186f/images/ShuryginVN.jpg);
-  background-size: 100% 100%;
-}
-//inner div copies
-
-.innerdiv:hover {
-  background: #007bff;
-  transition: 0.5s;
-  opacity: 0.5;
-}
-
-.innerdiv:hover .text{
+.div1:hover .text1{
   opacity: 1;
 }
 
+.div1:hover{
+  background:#007bff;
+  height: 75px;
+  
+  
+}
 
+.nounderline:hover{
+  text-decoration: none !important;
+}
 
-
-// .par {
-//   padding-bottom:30px;
-// }
-
-
-//categories, image transparency
-.box1img{
-    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-      filter: gray; /* IE5+ */
-      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-      -webkit-transition: all .8s ease-in-out;  
-    }
-
-    .box1img:hover {
-    filter: none;
-      -webkit-filter: grayscale(0);
-      -webkit-transform: scale(1.01);
-    }
-//categimgtransparency end
-
-//categories, image transparency
-.box2img{
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .8s ease-in-out;  
-  }
-
-  .box2img:hover {
-  filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.01);
-  }
-//categimgtransparency end
-
-//categories, image transparency
-.box3img{
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .8s ease-in-out;  
-  }
-
-  .box3img:hover {
-  filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.01);
-  }
-//categimgtransparency end
-
-//categories, image transparency
-.box4img{
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .8s ease-in-out;  
-  }
-
-  .box4img:hover {
-  filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.01);
-  }
-//categimgtransparency end
-
-//categories, image transparency
-.box5img{
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .8s ease-in-out;  
-  }
-
-  .box5img:hover {
-  filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.01);
-  }
-//categimgtransparency end
-
-
+.footermargin {
+  margin-bottom: 100px;
+}
 //Categories end
