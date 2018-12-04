@@ -38,3 +38,6 @@ Route::get('/login_scientists', function(){
 Route::get('/login_business', function(){
     return view('login_business');
 });
+Route::get('/type_login', function(){
+    return view('type_login');
+});

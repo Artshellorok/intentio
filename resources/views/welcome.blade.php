@@ -50,7 +50,7 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/login">Логин</a>
+              <a class="nav-link js-scroll-trigger" href="/type_login">Логин</a>
             </li>
           </ul>
         </div>

@@ -2,7 +2,7 @@
 @section('content')
     <div class="col-lg-12">
         <div class='project'>
-            <h1 class="mt-4"><a href='#'>Создать протез</a></h1>
+            <h1 class="mt-4"><a href='/project'>Создать протез</a></h1>
 
             <p class="lead">
             by

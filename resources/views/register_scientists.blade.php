@@ -19,6 +19,9 @@
                         <label class="form-check-label" for="exampleCheck1" >Запомнить пароль</label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-reg">Зарегистрироваться</button>
+                        <div class='rem_pass text-center' style='margin-top: 30px; font-size: 18px !important;'>
+                            <a href='/login_scientists'>Войти</a>
+                        </div>
                     </div>
                 </form>
             </div>
