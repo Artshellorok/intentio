@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - Start Bootstrap Template</title>
+    <title>Intentio</title>
 
     <link href="/css/app.css" rel="stylesheet">
 

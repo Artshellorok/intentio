@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class='container avg1'>
-    <h1 class="font-weight-bold text-center mb-4 ">За кого вы хотели бы зарегистрироваться?</h1>
+    <h1 class="font-weight-bold text-center mb-4 ">За кого вы хотели бы войти?</h1>
         <div class='row'>
             <a href="/login_scientists" class="ml-auto mr-4">
             <button type="button" class="btn btn-primary avg"><span class="font-weight-bold">Работодатель</span></button>

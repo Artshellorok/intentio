@@ -8,7 +8,7 @@
                         <div class="form-group">
                         <label for="exampleInputEmail1">E-mail</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите e-mail" class='fleximtupa'>
-                        <small id="emailHelp" class="form-text text-muted form-description">Эщкере тупа флекс</small>
+                        <small id="emailHelp" class="form-text text-muted form-description">Введите свой адрес электронной почты.</small>
                         </div>
                         <div class="form-group">
                         <label for="exampleInputPassword1">Пароль</label>
