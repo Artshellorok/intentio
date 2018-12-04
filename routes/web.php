@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('welcome');
 });
+Route::get('/categories', function(){
+    return view('categories');
+});
 Route::get('/projects', function(){
     return view('projects');
 });

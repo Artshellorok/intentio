@@ -77,8 +77,54 @@ body {
   margin-top: 50px;
   width: 200px;
 }
+<<<<<<< HEAD
 .flexesketit1 a{
   display: block !important;
   width: 100%;
   height: 100%;
 }
+=======
+
+// Categories
+
+.div1 {
+  height:50px;
+  width: 1125px;
+  background:lightgray;
+  transition: 1s;
+  margin-bottom: 50px;
+  
+}
+
+.text1 {
+  opacity: 1;
+  font-size: 20px;
+  transition:3s;
+  
+
+}
+
+.div1:hover{
+  background:#007bff;
+}
+
+.div1:hover .text1{
+  opacity: 1;
+}
+
+.div1:hover{
+  background:#007bff;
+  height: 75px;
+  
+  
+}
+
+.nounderline:hover{
+  text-decoration: none !important;
+}
+
+.footermargin {
+  margin-bottom: 100px;
+}
+//Categories end
+>>>>>>> 1e9ebc1ca6b1343b6603f16c700623bbfb4b0c03

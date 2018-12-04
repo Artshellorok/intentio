@@ -10564,3 +10564,40 @@ body {
   height: 100%;
 }
 
+.div1 {
+  height: 50px;
+  width: 1125px;
+  background: lightgray;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-bottom: 50px;
+}
+
+.text1 {
+  opacity: 1;
+  font-size: 20px;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.div1:hover {
+  background: #007bff;
+}
+
+.div1:hover .text1 {
+  opacity: 1;
+}
+
+.div1:hover {
+  background: #007bff;
+  height: 75px;
+}
+
+.nounderline:hover {
+  text-decoration: none !important;
+}
+
+.footermargin {
+  margin-bottom: 100px;
+}
+
