@@ -1,16 +1,16 @@
 @extends('layouts.master')
 @section('content')
-    <div class='container'>
+    <div class='container avg1'>
+    <h1 class="font-weight-bold text-center mb-4 ">За кого вы хотели бы зарегистрироваться?</h1>
         <div class='row'>
-            <div class='col-lg-6 flexesketit1' style='height: 100vh; background:#5fbd37;'>
-                <a href='#'>
-                    
-                </a>
-            </div>
-            <div class='col-lg-6 flexesketit1' style='height: 100vh; background: #4286f4'>
-                <a href='#'>
-                </a>
-            </div>
+            <a href="/login_scientists" class="ml-auto mr-4">
+            <button type="button" class="btn btn-primary avg"><span class="font-weight-bold">Работодатель</span></button>
+
+            </a>
+
+            <a href="/login_scientists" class="mr-auto ml-4">
+            <button type="button" class="btn btn-success avg"><span class="font-weight-bold">Исполнитель</span></button>
+            </a>
         </div>
     </div>
 @endsection
