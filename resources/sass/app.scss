@@ -134,5 +134,53 @@ body {
   margin-bottom: 300px;
   margin-top:150px;
 }
-
 //Categories end
+.shithover > a{
+  display: block;
+  color: #000 !important;
+  text-decoration: none !important;
+  transition: 0.5s;
+  padding: 20px;
+  width: 100%;
+}
+.shithover h5{
+  font-size: 28px !important;
+}
+.shithover > a:hover{
+  cursor:pointer;
+  color: #fff !important;
+  background: rgba(0, 123, 255,0.9);
+  text-decoration: none !important;
+}
+.response{
+  border: 1px solid #007AFF;
+  background: #007AFF;
+  padding:2%;
+  width: 40%;
+  color: #fff;
+  border-radius:  20px;
+}
+.chatBox{
+  width: 100%;
+  margin-top: 15px;
+}
+.request{
+  background: #00CC47;
+  border: 1px solid #00CC47;
+  padding:2%;
+  width: 40%;
+  color: #fff;
+  border-radius: 20px;
+  float: right;
+}
+.tupafleximesketit12{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40%;
+}
+.btn-tupaflex{
+  width: 100%;
+  margin-top: 30px;
+}
+  
+ 

@@ -5,7 +5,8 @@
 
 
 <div class="nounderline footermargin">
-    <a href="#" class="nounderline">
+    <h1 class='text-center' style='margin-top: 30px; padding-bottom: 30px;'>Выберите категорию</h1>
+    <a href="/business_reg" class="nounderline">
         <div class="bg-alert div1 mb-2 rounded ">
             <div class="text-light text1  mb-2">
             <p class="text-light ml-3">Тестирование продуктов</p>
@@ -15,7 +16,7 @@
     
 
 
-    <a href="#" class="nounderline">
+    <a href="/scientist_reg" class="nounderline">
         <div class="bg-alert div1 mb-2 rounded ">
             <div class="text-light text1  mb-2 nounderline">
             <p class="text-light ml-3 nounderline">Нейроинженерия</p>
@@ -52,7 +53,15 @@
 
 
 </div>
+<style>
+    .footer{
+        position:absolute;
+        width: 100vw;
+        bottom:0;
+        left: 0;
+    }
 
+</style>
 
 
 

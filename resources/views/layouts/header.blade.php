@@ -7,6 +7,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
+            <a class="nav-link" href="/contact">Связаться с исполнителями</a>
+          </li>
+          <li class="nav-item active">
             <a class="nav-link" href="/projects">
               Проекты
             </a>
@@ -14,9 +17,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
+          @if(0)
           <li class="nav-item">
             <a class="nav-link" href="/login_business">Войти как работодатель</a>
           </li>
+          @endif
           <li class="nav-item">
             <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
           </li>

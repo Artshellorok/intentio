@@ -44,3 +44,9 @@ Route::get('/login_business', function(){
 Route::get('/type_login', function(){
     return view('type_login');
 });
+Route::get('/contact', function(){
+    return view('contact');
+});
+Route::get('/chat', function(){
+    return view('chat');
+});
