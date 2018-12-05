@@ -17,7 +17,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-          @if(auth()->check())
+          @if(auth()->guard('web')->check())
           <li class="nav-item">
             <a class="nav-link" href="/login_business">Войти как работодатель</a>
           </li>
@@ -26,6 +26,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/project_create">Добавить проект</a>
+            </li>
           @endif
         </ul>
       </div>
