@@ -14,22 +14,13 @@ use \App\Category;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    return view('welcome');
-});
 Route::get('/categories', function(){
     $categories = Category::all();
     return view('categories', compact('categories'));
 });
-Route::get('/projects', function(){
-    return view('projects');
-});
-Route::get('/project', function(){
-    return view('project');
-});
-Route::get('/project_create', function(){
-    return view('create_project');
-});
+Route::get('/projects', 'ProblemsController@index');
+Route::get('/project/{problem}', 'ProblemsController@show');
+Route::get('/project_create', 'ProblemsController@create');
 Route::get('/scientist_reg', function(){
     return view('register_scientists');
 });
@@ -66,3 +57,4 @@ Route::post('/business_reg', 'AdminController@register');
 Route::post('/scientist_reg', 'UserController@register');
 Route::post('/login_scientists', 'UserController@login');
 Route::post('/login_business', 'AdminController@login');
+Route::post('/project_create', 'ProblemsController@store');
