@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: #007bff;" >
     <div class="container" >
-      <a class="navbar-brand" href="#">Intentio</a>
+      <a class="navbar-brand" href="/">Intentio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,11 +17,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-          @if(0)
+          @auth
           <li class="nav-item">
             <a class="nav-link" href="/login_business">Войти как работодатель</a>
           </li>
-          @endif
+          @endauth
           <li class="nav-item">
             <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
           </li>

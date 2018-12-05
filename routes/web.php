@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use \App\Category;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,7 +18,8 @@ Route::get('/login', function () {
     return view('welcome');
 });
 Route::get('/categories', function(){
-    return view('categories');
+    $categories = Category::all();
+    return view('categories', compact('categories'));
 });
 Route::get('/projects', function(){
     return view('projects');
@@ -50,3 +51,18 @@ Route::get('/contact', function(){
 Route::get('/chat', function(){
     return view('chat');
 });
+Route::get('/category/{category}', function($category){
+    if (Category::find($category)) {
+        session(['category' => $category]);
+        if (request('type') == 'business') {
+            return redirect('/business_reg');
+        }
+        if (request('type') == 'scientist') {
+            return redirect('/scientist_reg');
+        }
+    }
+});
+Route::post('/business_reg', 'AdminController@register');
+Route::post('/scientist_reg', 'UserController@register');
+Route::post('/login_scientists', 'UserController@login');
+Route::post('/login_business', 'AdminController@login');

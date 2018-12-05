@@ -3,16 +3,17 @@
     <div class='col-lg-12'>
             <div class='wrapper-form'>
             <h1 class='text-center reg-title' style='margin-bottom: 35px;'>Зарегистрироваться как работодатель</h1>
-                <form>
+                <form method="POST" action='/business_reg'>
+                    @csrf
                     <div class='form-wrapper'>
                         <div class="form-group">
                         <label for="exampleInputEmail1">E-mail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите e-mail" class='fleximtupa'>
+                        <input type="email" name='email'class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите e-mail" class='fleximtupa'>
                         <small id="emailHelp" class="form-text text-muted form-description">Введите свой адрес электронной почты.</small>
                         </div>
                         <div class="form-group">
                         <label for="exampleInputPassword1">Пароль</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль" class='fleximtupa'>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль" class='fleximtupa' name='password'>
                         </div>
                         <div class="form-group form-check rem_pass">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" class='fleximtupa'>
