@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Problem;
+use \App\Category;
 class ProblemsController extends Controller
 {
     function __construct()
@@ -15,9 +16,14 @@ class ProblemsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Category $category)
     {
-        $problems = Problem::all()->sortByDesc('created_at');
+        if($category->exists){
+            $problems = $category->problems;
+        }
+        else{
+            $problems = Problem::all()->sortByDesc('created_at');
+        }
         return view('projects', compact('problems'));
     }
 
@@ -56,8 +62,9 @@ class ProblemsController extends Controller
             'budget' => request('budget'),
             'employer_id' => auth()->guard('employer')->user()->id,
             'category_id' => request('category_id'),
-            'image' => $path
+            'image' => "/uploads/$name"
         ]);
+        return redirect('/projects');
     }
 
     /**

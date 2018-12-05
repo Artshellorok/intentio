@@ -58,3 +58,4 @@ Route::post('/scientist_reg', 'UserController@register');
 Route::post('/login_scientists', 'UserController@login');
 Route::post('/login_business', 'AdminController@login');
 Route::post('/project_create', 'ProblemsController@store');
+Route::get('/projects/{category}', 'ProblemsController@index');
