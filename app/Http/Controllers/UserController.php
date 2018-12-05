@@ -19,6 +19,7 @@ class UserController extends Controller
             'category_id' => session('category')
         ]);
         auth()->login($user);
+        auth()->guard('employer')->logout();
         return redirect('/projects');
     }
     public function login() 
@@ -28,6 +29,7 @@ class UserController extends Controller
             'password' => 'required'
         ]);
         if (auth()->attempt(request(['email', 'password']))) {
+            auth()->guard('employer')->logout();
             return redirect('/projects');
         }
         else{

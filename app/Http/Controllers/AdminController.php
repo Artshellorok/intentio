@@ -18,6 +18,7 @@ class AdminController extends Controller
             'password' => bcrypt(request('password'))
         ]);
         auth()->guard('employer')->login($employer);
+        auth()->logout();
         return redirect('/project_create');
     }
     public function login() 
@@ -27,6 +28,7 @@ class AdminController extends Controller
             'password' => 'required'
         ]);
         if (auth()->guard('employer')->attempt(request(['email', 'password']))){
+            auth()->logout();
             return redirect('/projects');
         }
         else{

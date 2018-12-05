@@ -17,14 +17,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-          @auth
+          @if(auth()->check())
           <li class="nav-item">
             <a class="nav-link" href="/login_business">Войти как работодатель</a>
           </li>
-          @endauth
+          @endif
+          @if(auth()->guard('employer')->check())
           <li class="nav-item">
             <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
           </li>
+          @endif
         </ul>
       </div>
     </div>
