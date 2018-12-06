@@ -59,3 +59,6 @@ Route::post('/login_scientists', 'UserController@login');
 Route::post('/login_business', 'AdminController@login');
 Route::post('/project_create', 'ProblemsController@store');
 Route::get('/projects/{category}', 'ProblemsController@index');
+Route::post('/project/{problem}/offer', 'ProblemsController@offer');
+Route::post('/project/{problem}/decline', 'ProblemsController@decline');
+Route::post('/project/{problem}/accept', 'ProblemsController@accept');

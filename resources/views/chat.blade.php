@@ -5,7 +5,7 @@
     <div>
         <div class="response"> 
             <strong>artshellorok@gmail.com</strong> 
-            <br>Вот мой discord: esketittupaflex2281337 
+            <br>Привет   
         </div>
     </div>
     <div>
@@ -15,7 +15,7 @@
     <div>
             <div class="response"> 
                 <strong>artshellorok@gmail.com</strong> 
-                <br>Вот мой discord: esketittupaflex2281337 
+                <br>Пока
             </div>
         </div>
     <textarea class="form-control tupafleximesketit12" id="exampleFormControlTextarea1" rows="3" placeholder='Введите сообщение...'></textarea>

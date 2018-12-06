@@ -24,6 +24,13 @@ class CreateProblemsTable extends Migration
             $table->integer('employer_id');
             $table->timestamps();
         });
+        Schema::create('problem_user', function (Blueprint $table) {
+            $table->integer('problem_id');
+            $table->integer('user_id');
+            $table->string('offer');
+            $table->string('status');
+            $table->primary(['problem_id', 'user_id']);
+        });
     }
 
     /**
@@ -34,5 +41,6 @@ class CreateProblemsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('problems');
+        Schema::dropIfExists('problem_user');
     }
 }

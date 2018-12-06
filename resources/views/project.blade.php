@@ -5,8 +5,7 @@
         <h1 class="mt-4">{{$problem->title}}</h1>
 
         <p class="lead">
-          by
-          <a href="#">{{$problem->employer->email}}</a>
+          {{$problem->employer->email}}
         </p>
 
         <hr>
@@ -22,79 +21,93 @@
                     <h5>Бюджет: {{$problem->budget}} рублей</h5>
                 @endif
         <p class="lead">{{$problem->demands}}</p>
-        <hr>
-
-
-        <div class="card my-4">
-          <h5 class="card-header">Leave a Comment:</h5>
-          <div class="card-body">
-            <form>
-              <div class="form-group">
-                <textarea class="form-control" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Commenter Name</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vu
-            lputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            <div class="d-flex">
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold mr-2">+</button>
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold">-</button>
+        <?php $nibba = $problem->users()->wherePivot('status', '=', 'Принято')->get()?>
+        @if(count($nibba))
+        @foreach($nibba as $nibba)
+          <div class="media mb-4">
+            <div class="media-body">
+              <h5 class="mt-0">{{$nibba->email}}</h5>
+              
+              {{$nibba->pivot->offer}}
+              <p>Статус:
+                  {{$nibba->pivot->status}}
+              </p>
             </div>
             
           </div>
-          
-        </div>
-
-        <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Commenter Name</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-             sollicitudin. Cras purus odio, vestibulum in vulp
-            utate at, tempus viverra turpis. Fusce condimentum nunc ac nisi v
-            ulputate fringil
-            la. Donec lacinia congue felis in faucibus.
-            <div class="d-flex">
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold mr-2">+</button>
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold">-</button>
-            </div>
-            <div class="media mt-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras p
-                urus odio, vestibulum in vulputate at, tempus viverra turpis. Fusc
-                e condimentum 
-                nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          @auth
+          @if($nibba->id != auth()->user()->id) 
+              @if(auth()->user()->problems->contains($problem->id))
+              <div class="media mb-4">
+                <div class="media-body">
+                  <h5 class="mt-0">{{auth()->user()->email}}</h5>
+                  
+                  {{$problem->users->find(auth()->user()->id)->pivot->offer}}
+                  <p>Статус:
+                      {{$problem->users->find(auth()->user()->id)->pivot->status}}
+                  </p>
+                </div>
                 
-                <div class="d-flex">
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold mr-2">+</button>
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold">-</button>
-            </div>
               </div>
-            </div>
-            <div class="media mt-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Commenter Name</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras pur
-                us odio, vestibulum in vulputate at, tempus viverra turpis. F
-                usce condimentu
-                m nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                <div class="d-flex">
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold mr-2">+</button>
-              <button type="button" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold">-</button>
-            </div>
+              @endif
+          @endif
+          @endauth
+        @endforeach
+        @else
+          @auth
+            @if(auth()->user()->problems->contains($problem->id))
+              <div class="media mb-4">
+                <div class="media-body">
+                  <h5 class="mt-0">{{auth()->user()->email}}</h5>
+                  
+                  {{$problem->users->find(auth()->user()->id)->pivot->offer}}
+                  <p>Статус:
+                      {{$problem->users->find(auth()->user()->id)->pivot->status}}
+                  </p>
+                </div>
+                
               </div>
-            </div>
-          </div>
-        </div>
+            @else
+              <div class="card my-4">
+                <h5 class="card-header">Отправить предложение:</h5>
+                <div class="card-body">
+                  <form method='POST' action='/project/{{$problem->id}}/offer'>
+                    @csrf
+                    <div class="form-group">
+                      <textarea class="form-control" rows="3" name='offer'></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                  </form>
+                </div>
+              </div>
+            @endif
+          @endauth
+          @if(auth()->guard('employer')->check())
+            @if(auth()->guard('employer')->user()->id == $problem->employer->id)
+            @foreach($problem->users()->wherePivot('status', 'Рассматривается')->get() as $user)
+            <div class="media mb-4">
+                <div class="media-body">
+                  <h5 class="mt-0">{{$user->email}}</h5>
+                  {{$user->pivot->offer}}
+                  <div class="d-flex">
+                    <form method='POST' action='/project/{{$problem->id}}/accept'>
+                      @csrf
+                      <input type='hidden' value='{{$user->id}}' name='user'>
+                      <button type="submit" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold mr-2">+</button>
+                    </form>
+                    <form method='POST' action='/project/{{$problem->id}}/decline'>
+                      @csrf
+                      <input type='hidden' name='user' value='{{$user->id}}'>
+                      <button type="submit" class="btn btn-primary pl-3 pr-3 pt-2 pb-2 font-weight-bold">-</button>
+                    </form>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            @endforeach
+          @endif
+        @endif
+      @endif
       </div>
 @endsection

@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\User;
 use \App\Problem;
 use \App\Category;
 class ProblemsController extends Controller
 {
     function __construct()
     {
-        $this->middleware('auth:employer')->except(['index', 'show']);
+        $this->middleware('auth:employer')->except(['index', 'show','offer']);
+        $this->middleware('auth')->only(['offer']);
     }
     /**
      * Display a listing of the resource.
@@ -20,7 +22,7 @@ class ProblemsController extends Controller
     {
         $categories = Category::all();
         if($category->exists){
-            $problems = $category->problems;
+            $problems = $category->problems->sortByDesc('created_at');
         }
         else{
             $problems = Problem::all()->sortByDesc('created_at');
@@ -112,5 +114,22 @@ class ProblemsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function offer(Problem $problem)
+    {
+        $problem->users()->attach(auth()->user()->id, ['offer' => request('offer'), 'status' => 'Рассматривается']);
+        return back();
+    }
+    public function accept(Problem $problem)
+    {
+        $problem->users->find(request('user'))->pivot->status = 'Принято';
+        $problem->users->find(request('user'))->pivot->update();
+        return back();
+    }
+    public function decline(Problem $problem)
+    {
+        $problem->users->find(request('user'))->pivot->status = 'Отклонено';
+        $problem->users->find(request('user'))->pivot->update();
+        return back();
     }
 }

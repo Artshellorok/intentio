@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group select-custome">
                     <label for="exampleFormControlSelect1">Категория</label>
-                    <select class="form-control" id="exampleFormControlSelect1" style='width: 300px; max-width:300px' name='category_id'>
+                    <select class="form-control" id="exampleFormControlSelect1" style='width: 300px; max-width:300px' name='category_id' value="{{session('category')}}">
                       <option value='1'>Тестирование продуктов</option>
                       <option value='2'>Нейроинженерия</option>
                       <option value='3'>Обработка семян</option>
