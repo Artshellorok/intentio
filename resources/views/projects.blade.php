@@ -23,7 +23,8 @@
                 <hr>
                 
                 <p>{{$problem->created_at->diffForHumans()}}</p>
-
+                <?php $flexims = $problem->users()->wherePivot('status', '=', 'Принято')->get() ?>
+                <p>Исполнитель: @if(count($flexims)) {{$flexims[0]->email}} @else {{'Нет'}}@endif</p>
                 <img class="img-fluid rounded" src="{{$problem->image}}" alt="">
                 <hr>
                 @if($problem->dogovor)
