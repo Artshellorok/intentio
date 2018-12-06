@@ -31,6 +31,7 @@ class CreateProblemsTable extends Migration
             $table->string('status');
             $table->primary(['problem_id', 'user_id']);
         });
+        DB::statement('ALTER Table problem_user add channel_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;');
     }
 
     /**

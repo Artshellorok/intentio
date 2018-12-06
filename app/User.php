@@ -13,7 +13,7 @@ class User extends Authenticatable
         return $this->belongsTo('\App\Category');
     }
     public function problems(){
-        return $this->belongsToMany('\App\Problem');
+        return $this->belongsToMany('\App\Problem')->withPivot('offer', 'status','channel_id');
     }
     /**
      * The attributes that are mass assignable.

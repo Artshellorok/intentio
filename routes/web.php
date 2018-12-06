@@ -11,6 +11,7 @@
 |
 */
 use \App\Category;
+use \App\User;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -62,3 +63,6 @@ Route::get('/projects/{category}', 'ProblemsController@index');
 Route::post('/project/{problem}/offer', 'ProblemsController@offer');
 Route::post('/project/{problem}/decline', 'ProblemsController@decline');
 Route::post('/project/{problem}/accept', 'ProblemsController@accept');
+Route::get('/chat/{id}', function($id){
+    return view('chat')->with('id', $id);
+});
