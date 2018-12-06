@@ -63,7 +63,8 @@ class ProblemsController extends Controller
             'budget' => request('budget'),
             'employer_id' => auth()->guard('employer')->user()->id,
             'category_id' => request('category_id'),
-            'image' => "/uploads/$name"
+            'image' => "/uploads/$name",
+            'dogovor' => $dogovor
         ]);
         return redirect('/projects');
     }

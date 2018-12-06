@@ -21,12 +21,18 @@
                 </p>
 
                 <hr>
+                
                 <p>{{$problem->created_at->diffForHumans()}}</p>
 
                 <img class="img-fluid rounded" src="{{$problem->image}}" alt="">
-
                 <hr>
+                @if($problem->dogovor)
+                    <h5>Бюджет: Договорной</h5>
+                @else
+                    <h5>Бюджет: {{$problem->budget}} рублей</h5>
+                @endif
                 <p class="lead">{{$problem->demands}}</p>
+                
             </div>
         @endforeach
     </div>

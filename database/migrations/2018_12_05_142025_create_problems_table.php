@@ -18,6 +18,7 @@ class CreateProblemsTable extends Migration
             $table->string('title');
             $table->text('demands');
             $table->string('budget');
+            $table->boolean('dogovor');
             $table->string('image');
             $table->integer('category_id');
             $table->integer('employer_id');
