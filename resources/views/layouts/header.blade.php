@@ -7,9 +7,6 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/contact">Связаться с исполнителями</a>
-          </li>
-          <li class="nav-item active">
             <a class="nav-link" href="/projects">
               Проекты
             </a>
@@ -23,12 +20,16 @@
           </li>
           @endif
           @if(auth()->guard('employer')->check())
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="/project_create">Добавить проект</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/contact">Связаться с исполнителями</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/project_create">Добавить проект</a>
-            </li>
           @endif
         </ul>
       </div>

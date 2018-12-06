@@ -18,13 +18,14 @@ class ProblemsController extends Controller
      */
     public function index(Category $category)
     {
+        $categories = Category::all();
         if($category->exists){
             $problems = $category->problems;
         }
         else{
             $problems = Problem::all()->sortByDesc('created_at');
         }
-        return view('projects', compact('problems'));
+        return view('projects', compact('problems', 'categories'));
     }
 
     /**
