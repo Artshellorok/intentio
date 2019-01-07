@@ -43,6 +43,9 @@ Route::get('/contact', function(){
 Route::get('/chat', function(){
     return view('chat');
 });
+Route::get('/chatp/{id}', function($id){
+    return view('projects.chat')->with('id', $id);
+});
 Route::get('/category/{category}', function($category){
     if (Category::find($category)) {
         session(['category' => $category]);

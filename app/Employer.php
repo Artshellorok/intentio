@@ -21,6 +21,6 @@ class Employer extends Authenticatable
     }
     public function projects()
     {
-        return $this->belongsToMany('\App\Project')->withPivot('offer', 'status');
+        return $this->belongsToMany('\App\Project')->withPivot('offer', 'status', 'channel_id');
     }
 }
