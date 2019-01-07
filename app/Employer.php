@@ -19,4 +19,8 @@ class Employer extends Authenticatable
     {
         return $this->hasMany('\App\Problem');
     }
+    public function projects()
+    {
+        return $this->belongsToMany('\App\Project')->withPivot('offer', 'status');
+    }
 }

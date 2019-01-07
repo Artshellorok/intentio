@@ -9,11 +9,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    public function category(){
-        return $this->belongsTo('\App\Category');
-    }
     public function problems(){
         return $this->belongsToMany('\App\Problem')->withPivot('offer', 'status','channel_id');
+    }
+    public function projects(){
+        return $this->hasMany('\App\Project');
     }
     /**
      * The attributes that are mass assignable.

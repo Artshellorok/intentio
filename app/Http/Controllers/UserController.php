@@ -16,7 +16,6 @@ class UserController extends Controller
         $user = User::create([
             'email' => request('email'),
             'password' => bcrypt(request('password')),
-            'category_id' => session('category')
         ]);
         auth()->login($user);
         auth()->guard('employer')->logout();

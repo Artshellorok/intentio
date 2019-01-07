@@ -66,3 +66,11 @@ Route::post('/project/{problem}/accept', 'ProblemsController@accept');
 Route::get('/chat/{id}', function($id){
     return view('chat')->with('id', $id);
 });
+Route::get('/developments/create', 'ProjectsController@create');
+Route::get('/developments','ProjectsController@index');
+Route::get('/developments/{category}','ProjectsController@index');
+Route::get('/development/{project}','ProjectsController@show');
+Route::post('/developments/create', 'ProjectsController@store');
+Route::post('/development/{project}/offer','ProjectsController@offer');
+Route::post('/development/{project}/accept','ProjectsController@accept');
+Route::post('/development/{project}/decline','ProjectsController@decline');

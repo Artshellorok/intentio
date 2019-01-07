@@ -13,6 +13,10 @@ class Category extends Model
     {
         return $this->hasMany('\App\Problem');
     }
+    public function projects()
+    {
+        return $this->hasMany('\App\Project');
+    }
     public function getRouteKeyName()
     {
         return 'name';

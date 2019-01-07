@@ -11,10 +11,9 @@
               Проекты
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+          <li class="nav-item active">
+            <a class="nav-link" href="/developments">Разработки</a>
           </li>
-          
           @if(auth()->guard('employer')->check())
           
           <li class="nav-item active">
@@ -32,6 +31,9 @@
           <li class="nav-item">
               <a class="nav-link" href="/contact">Связаться с работодателем</a>
             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/developments/create">Добавить разработку</a>
+          </li>
           @else
             <li class="nav-item">
               <a class="nav-link" href="/login_scientists">Войти как исполнитель</a>
