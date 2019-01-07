@@ -47,7 +47,7 @@
                     <?php $coolgay = $coolgay[0] ?> 
                         <a href='/chatp/{{$coolgay->pivot->channel_id}}' class='media mb-4 rounded'>
                             <div class="media-body">
-                                <h5 class="mt-0">{{$coolgay->email}}</h5>          
+                                <h5 class="mt-0" style='display:inline'>{{$coolgay->email}}</h5>  <span style='font-size: 20px; margin-left: 15px;'>ID: {{$coolgay->pivot->channel_id}}</span>        
                             </div>     
                         </a>
                     @endif
