@@ -10,12 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
-
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
 use \App\Category;
 use \App\User;
 Route::get('/', function () {
@@ -83,4 +77,3 @@ Route::post('/developments/create', 'ProjectsController@store');
 Route::post('/development/{project}/offer','ProjectsController@offer');
 Route::post('/development/{project}/accept','ProjectsController@accept');
 Route::post('/development/{project}/decline','ProjectsController@decline');
->>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
