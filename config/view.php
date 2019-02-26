@@ -14,6 +14,8 @@ return [
     */
 
     'paths' => [
+        'public/images',
+        public_path('img'),
         resource_path('views'),
     ],
 
