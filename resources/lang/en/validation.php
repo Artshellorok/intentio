@@ -108,7 +108,10 @@ return [
         'string' => 'The :attribute must be :size characters.',
         'array' => 'The :attribute must contain :size items.',
     ],
+<<<<<<< HEAD
     'starts_with' => 'The :attribute must start with one of the following: :values',
+=======
+>>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
     'unique' => 'The :attribute has already been taken.',

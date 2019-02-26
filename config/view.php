@@ -14,6 +14,11 @@ return [
     */
 
     'paths' => [
+<<<<<<< HEAD
+=======
+        'public/images',
+        public_path('img'),
+>>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
         resource_path('views'),
     ],
 

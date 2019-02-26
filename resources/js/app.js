@@ -16,11 +16,52 @@ window.Vue = require('vue');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+<<<<<<< HEAD
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+=======
+window.setCookie = function(name, value, options) {
+    options = options || {};
+  
+    var expires = options.expires;
+  
+    if (typeof expires == "number" && expires) {
+      var d = new Date();
+      d.setTime(d.getTime() + expires * 1000);
+      expires = options.expires = d;
+    }
+    if (expires && expires.toUTCString) {
+      options.expires = expires.toUTCString();
+    }
+  
+    value = encodeURIComponent(value);
+  
+    var updatedCookie = name + "=" + value;
+  
+    for (var propName in options) {
+      updatedCookie += "; " + propName;
+      var propValue = options[propName];
+      if (propValue !== true) {
+        updatedCookie += "=" + propValue;
+      }
+    }
+  
+    document.cookie = updatedCookie;
+  }
+window.getCookie = function(name) {
+    var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
+>>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

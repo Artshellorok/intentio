@@ -8,7 +8,186 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+<<<<<<< HEAD
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+=======
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+  .wrapper-form{
+    padding-top: 35px !important; 
+  }
+}
+@media (max-width: 992px) {
+  .form-wrapper{
+    width: 100% !important;
+  }
+}
+.wrapper-form{
+  padding: 2rem;
+  padding-bottom: 250px;
+}
+.form-wrapper{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+  input{
+    font-size:24px!important;
+  }
+  input{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+  }
+  input::placeholder{
+    font-size:24px !important;
+  }
+}
+.btn-reg{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom :40px;
+  font-family: Helvetica;
+  text-transform:uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+.form-description{
+  font-size:14px;
+}
+.reg-title{
+  margin-top: 1vw;
+}
+.rem_pass{
+  font-size: 14px !important;
+}
+.project{
+  margin-bottom: 75px;
+}
+.form-groups{
+  font-weight: bold;
+  font-size: 15px !important;
+}
+.select-custome{
+  margin-top: 25px;
+}
+.select-flexim{
+  margin-top: 50px;
+  width: 200px;
+}
+.flexesketit1 a{
+  display: block !important;
+  width: 100%;
+  height: 100%;
+}
+
+// Categories
+
+.div1 {
+  height:50px;
+  width: 1125px;
+  background:lightgray;
+  transition: 1s;
+  margin-bottom: 50px;
+  
+}
+
+.text1 {
+  opacity: 1;
+  font-size: 20px;
+  transition:3s;
+  
+
+}
+
+.div1:hover{
+  background:#007bff;
+}
+
+.div1:hover .text1{
+  opacity: 1;
+}
+
+.div1:hover{
+  background:#007bff;
+  height: 75px;
+  
+  
+}
+
+.nounderline:hover{
+  text-decoration: none !important;
+}
+
+.footermargin {
+  margin-bottom: 100px;
+}
+
+.avg {
+  width: 150px;
+  height:60px;
+}
+
+.avg1{
+  margin-bottom: 300px;
+  margin-top:150px;
+}
+//Categories end
+.shithover > a{
+  display: block;
+  color: #000 !important;
+  text-decoration: none !important;
+  transition: 0.5s;
+  padding: 20px;
+  width: 100%;
+}
+.shithover h5{
+  font-size: 28px !important;
+}
+.shithover > a:hover{
+  cursor:pointer;
+  color: #fff !important;
+  background: rgba(0, 123, 255,0.9);
+  text-decoration: none !important;
+}
+.response{
+  border: 1px solid #007AFF;
+  background: #007AFF;
+  padding:2%;
+  width: 40%;
+  color: #fff;
+  border-radius:  20px;
+}
+.chatBox{
+  width: 100%;
+  margin-top: 15px;
+}
+.request{
+  background: #00CC47;
+  border: 1px solid #00CC47;
+  padding:2%;
+  width: 40%;
+  color: #fff;
+  border-radius: 20px;
+  float: right;
+}
+.tupafleximesketit12{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40%;
+}
+.btn-tupaflex{
+  width: 100%;
+  margin-top: 30px;
+}
+  
+ 
+>>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
