@@ -16,13 +16,6 @@ window.Vue = require('vue');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-<<<<<<< HEAD
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-=======
 window.setCookie = function(name, value, options) {
     options = options || {};
   
@@ -61,7 +54,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
->>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

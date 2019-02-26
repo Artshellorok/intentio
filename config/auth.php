@@ -40,14 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-<<<<<<< HEAD
-
-=======
         'employer' => [
             'driver' => 'session',
             'provider' => 'employers',
         ],
->>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -76,13 +72,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-<<<<<<< HEAD
-=======
         'employers' => [
             'driver' => 'eloquent',
             'model' => App\Employer::class,
         ],
->>>>>>> af47d6fd0896a29b3b43914343826a030adcc6bd
 
         // 'users' => [
         //     'driver' => 'database',
